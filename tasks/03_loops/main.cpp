@@ -1,9 +1,5 @@
 #include <iostream>
-
-// Прочитать n, затем n целых чисел.
-// Напечатать сумму, минимум, максимум и число строго положительных.
-// Формат вывода уже собран ниже, менять его не нужно.
-// n в тестах всегда >= 0. При n == 0 чисел дальше нет.
+#include <limits>
 
 int main() {
     int n = 0;
@@ -12,31 +8,47 @@ int main() {
     }
 
     long long sum = 0;
-    int positive = 0;
-    bool has_value = false;
-    int min_value = 0;
-    int max_value = 0;
+    int min_val = 0;
+    int max_val = 0;
+    int positive_count = 0;
+    bool has_numbers = false;
 
     for (int i = 0; i < n; ++i) {
-        int value = 0;
-        std::cin >> value;
+        int current_value = 0;
+        std::cin >> current_value;
 
-        // TODO: обновите sum, positive, min_value, max_value и has_value.
-        // positive считает числа строго больше нуля.
-        // Ноль и отрицательные в positive не входят.
-        // min и max существуют только после первого числа: смотрите на has_value.
-        // sum копите в long long: три числа 1000000000 в int не влезают.
-        (void)value;
+        sum += current_value;
+
+        if (current_value > 0) {
+            positive_count++;
+        }
+
+        if (!has_numbers) {
+            min_val = current_value;
+            max_val = current_value;
+            has_numbers = true;
+        } else {
+            if (current_value < min_val) {
+                min_val = current_value;
+            }
+            if (current_value > max_val) {
+                max_val = current_value;
+            }
+        }
     }
 
-    std::cout << "sum: " << sum << '\n';
-    if (!has_value) {
+    std::cout << "sum: " << sum << "\n";
+    
+    if (has_numbers) {
+        std::cout << "min: " << min_val << "\n";
+        std::cout << "max: " << max_val << "\n";
+    } else {
         std::cout << "min: none\n";
         std::cout << "max: none\n";
-    } else {
-        std::cout << "min: " << min_value << '\n';
-        std::cout << "max: " << max_value << '\n';
     }
-    std::cout << "positive: " << positive << '\n';
+    
+    std::cout << "positive: " << positive_count << "\n";
+
     return 0;
 }
+
