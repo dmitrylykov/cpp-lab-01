@@ -1,0 +1,9 @@
+name: Ann
+count: 1
+sum: 0
+average: 0.00
+min: 0
+max: 0
+passed: 0
+failed: 1
+verdict: debt

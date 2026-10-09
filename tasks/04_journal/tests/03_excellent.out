@@ -1,0 +1,9 @@
+name: Mia
+count: 2
+sum: 190
+average: 95.00
+min: 90
+max: 100
+passed: 2
+failed: 0
+verdict: excellent

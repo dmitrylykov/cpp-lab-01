@@ -1,0 +1,9 @@
+name: Oleg
+count: 2
+sum: 150
+average: 75.00
+min: 70
+max: 80
+passed: 2
+failed: 0
+verdict: ok

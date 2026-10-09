@@ -1,0 +1,9 @@
+name: Ivan
+count: 4
+sum: 324
+average: 81.00
+min: 59
+max: 100
+passed: 3
+failed: 1
+verdict: debt

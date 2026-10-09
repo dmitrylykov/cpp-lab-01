@@ -1,0 +1,9 @@
+name: Oleg
+count: 3
+sum: 2
+average: 0.67
+min: 0
+max: 1
+passed: 0
+failed: 3
+verdict: debt

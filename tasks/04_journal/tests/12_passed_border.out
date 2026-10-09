@@ -1,0 +1,9 @@
+name: Nika
+count: 2
+sum: 119
+average: 59.50
+min: 59
+max: 60
+passed: 1
+failed: 1
+verdict: debt
